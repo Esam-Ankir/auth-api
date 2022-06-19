@@ -1,4 +1,3 @@
-//auth
 'use strict';
 
 // 3rd Party Resources

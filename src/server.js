@@ -25,6 +25,9 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(logger);
 
+app.get("/",(req,res) => {
+  res.send("This is the home page");
+})
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -4,12 +4,13 @@
   "description": "Authentication Server Phase 3: Role Based Access Control",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "test": "NODE_ENV=test jest --coverage",
     "init:config": "sequelize init:config",
     "db:create": "sequelize db:create",
-    "watch": "nodemon index.js",
-    "test-watch": "jest --watchAll",
-    "test": "jest"
+    "watch": "NODE_ENV=development nodemon index.js",
+    "test:watch": "NODE_ENV=test jest --watchAll"
   },
   "repository": {
     "type": "git",
